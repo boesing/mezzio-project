@@ -46,7 +46,7 @@
         "laminas/laminas-diactoros": "^1.8.7 || ^2.2.2",
         "laminas/laminas-servicemanager": "^3.4",
         "laminas/laminas-stdlib": "^3.2.1",
-        "laminas/laminas-zendframework-bridge": "^1.0",
+        "laminas/laminas-zendframework-bridge": "dev-bugfix/non-aliased-service-replacements-being-dropped as 1.1",
         "mezzio/mezzio": "^3.2.1",
         "mezzio/mezzio-fastroute": "^3.0.3",
         "mezzio/mezzio-helpers": "^5.3"
@@ -93,6 +93,10 @@
         {
             "type": "git",
             "url": "git@github.com:boesing/zend-form-module.git"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:boesing/laminas-zendframework-bridge.git"
         }
     ],
     "replace": {
