@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
+use Boesing\Zend\Form\FormFactoryImplementingService;
 use Mezzio\Router\RouterInterface;
 use Mezzio\Template\TemplateRendererInterface;
 use Psr\Container\ContainerInterface;
@@ -19,6 +20,8 @@ class HomePageHandlerFactory
         $template = $container->has(TemplateRendererInterface::class)
             ? $container->get(TemplateRendererInterface::class)
             : null;
+
+        $container->get(FormFactoryImplementingService::class);
 
         return new HomePageHandler(get_class($container), $router, $template);
     }
